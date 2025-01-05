@@ -1,0 +1,28 @@
+env:
+  contexts:
+  - name: testcontext
+    urls:
+    - https://altoro.testfire.net
+    includePaths:
+    - https://altoro.testfire.net.*
+    excludePaths:
+    - https://altoro.testfire.net/logout.jsp
+jobs:
+- type: replacer
+  rules:
+  - description: replacer_script
+    url: https://altoro.testfire.net.*
+    matchType: req_header
+    matchString: Cookie
+    matchRegex: false
+    replacementString: JSESSIONID=25C03D1BA7A7921DBC25EC8A9924197A; AltoroAccounts=ODAwMDAwfkNvcnBvcmF0ZX41LjIzOTE5ODM2MUU3fDgwMDAwMX5DaGVja2luZ34xMDc3MjYuNDR8
+    tokenProcessing: false
+  parameters:
+    deleteAllRules: true
+- type: spiderAjax
+  parameters:
+    context: testcontext
+    maxDuration: 1
+    maxCrawlDepth: 5
+    numberOfBrowsers: 1
+    runOnlyIfModern: false
