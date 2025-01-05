@@ -5,6 +5,7 @@ ZAP(Zed Attack Proxy) 도구의 스크립트 기능을 활용하여 다양한 �
 ## 구성 파일
  ### zap_script 
   `zap_script` : ZAP의 스크립트 기능을 통해 작성된 스크립트(Graal.js)
+  
   **주요 기능:**
    - Authentication Script를 통한 자동 로그인으로 인증 정보 처리
    - HttpSender Script를 통한 쿠키값 고정을 통한 인증 정보 전달
@@ -12,7 +13,8 @@ ZAP(Zed Attack Proxy) 도구의 스크립트 기능을 활용하여 다양한 �
    - Standalone Script를 통한 Selenium 수동 로그인 과정 처리  
 
  ### selenium_to_yaml
-  `selenium_to_yaml` : Python을 통한 Selenium과 ZAP을 yaml파일로 연결하기 위한 스크립트
+  `selenium_to_yaml` : Python을 통한 Selenium과 ZAP을 yaml파일로 연결하기 위한 스크립트 
+  
   **주요 기능:**
    - Python을 통해 Selenium을 실행
    - Selenium 상에서 수동 로그인 후 쿠키값 추출
